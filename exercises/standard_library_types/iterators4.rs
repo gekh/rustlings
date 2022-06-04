@@ -1,8 +1,9 @@
 // iterators4.rs
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
+    let nums: Vec<u64> = (1..num + 1).collect();
+    nums.into_iter().reduce(|accum, item| accum * item).unwrap()
+
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
